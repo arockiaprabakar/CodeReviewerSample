@@ -10,5 +10,9 @@ public class ReviewerApp {
 		
 		System.out.println("hello "+name);
 	}
+	
+	public int sum(int a, int b){
+		return a+b;
+	}
 
 }
