@@ -1,7 +1,6 @@
 package com.centre;
 
 import java.sql.*;
-import java.lang.*;
    public class addclient
  
     {
