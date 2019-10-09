@@ -3,7 +3,7 @@ package com.centre;
 import java.util.*;
 import java.sql.*;
 import java.lang.*;
-   public class dbenquiry
+   public class DbEnquiry
  
     {
      public Connection con=null;

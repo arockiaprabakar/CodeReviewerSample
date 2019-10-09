@@ -3,21 +3,23 @@ package com.centre;
 import java.util.*;
 import java.sql.*;
 import java.lang.*;
-   public class staffattend
+   public class DbCourse
  
     {
      public Connection con=null;
      public ResultSet rs=null;
      public Statement st=null;
-     public String empno,name,Query;
+     public String courseno,cname,amount,duration,Query;
 
 
-      public void set(String empno,String name)
+      public void set(String courseno,String cname,String amount,String duration)
            {
              
-               this.empno=empno;
-               this.name=name;
-               
+               this.courseno=courseno;
+               this.cname=cname;
+               this.amount=amount;
+               this.duration=duration;
+
               try
               {
             	  Class.forName("com.mysql.jdbc.Driver");
@@ -29,7 +31,7 @@ import java.lang.*;
           {
             try
             {
-               Query="insert into StaffAttendence values(' "+empno+" ',' "+name+" ')";
+               Query="insert into coursedetails values(' "+courseno+" ',' "+cname+" ',' "+amount+" ',' "+duration+" ')";
                st=con.createStatement();
                 st.executeQuery(Query);
             }catch(Exception e){} 

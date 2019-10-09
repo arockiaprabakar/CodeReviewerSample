@@ -1,7 +1,7 @@
 package com.centre;
 
 import java.sql.*;
-   public class addclient
+   public class Addclient
  
     {
      public Connection con=null;

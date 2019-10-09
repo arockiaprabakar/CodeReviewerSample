@@ -1,24 +1,25 @@
 package com.centre;
 
+import java.util.*;
 import java.sql.*;
 import java.lang.*;
-   public class addplacement
+   public class DbSalary
  
     {
      public Connection con=null;
      public ResultSet rs=null;
      public Statement st=null;
-     public String name,placement,company,person,dop,Query;
+     public String empno,empname,doj,pay,Query;
 
 
-      public void set(String name,String placement,String company,String person,String dop)
+      public void set(String empno,String empname,String doj,String pay)
            {
              
-               this.name=name;
-               this.placement=placement;
-               this.company=company;
-               this.person=person;
-               this.dop=dop;
+               this.empno=empno;
+               this.empname=empname;
+               this.doj=doj;
+               this.pay=pay;
+
               try
               {
             	  Class.forName("com.mysql.jdbc.Driver");
@@ -30,7 +31,7 @@ import java.lang.*;
           {
             try
             {
-               Query="insert into PlacementDetails values(' "+name+" ',' "+placement+" ',' "+company+" ',' "+person+" ',' "+dop+" ')";
+               Query="insert into salarydetails values(' "+empno+" ',' "+empname+" ',' "+doj+" ',' "+pay+" ')";
                st=con.createStatement();
                 st.executeQuery(Query);
             }catch(Exception e){} 
